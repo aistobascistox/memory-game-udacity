@@ -79,11 +79,7 @@ const restartBtn = document.querySelector('#restart');
 restartBtn.addEventListener('click', function() {
     cardsDeck.innerHTML = "";
 
-    init();
-
     resetBoard();
+
+    init();
 });
-
-//Init again!
-
-init();
