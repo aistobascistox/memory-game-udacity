@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    height: 100vh;
+    display: flex;
+    background-color: #e0e0e0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Bungee Outline', cursive;
+    font-weight: 600;
+    color: #4527a0;
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 60px;
+}
+
+.score-panel {
+    display: flex;
+    margin: 0 5px 0 0;
+}
+
+#score {
+    text-align: center;
+}
+
+.moves {
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 16px;
+    display: inline;
+    align-items: center;
+    padding-right: 60px;
+    padding-bottom: 15px;
+}
+
+.stars {
+    padding: 0;
+    margin: 0 2px 0 0;
+    display: inline;
+}
+
+.star {
+    list-style-type: none;
+    display: inline;
+    color: white;
+}
+
+#timer {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    padding-right: 30px;
+}
+
+#restart {
+    cursor: pointer;
+}
+
+.deck {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to bottom right, #4db6ac, #7986cb);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    perspective: 1000px;
+}
+
+.card {
+    width: 25%;
+    height: 33.333%;
+    position: relative;
+    border: 12px solid transparent;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .3s;
+}
+
+.card:active {
+    transform: scale(.95);
+    transition: transform 0.2s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 4px;
+    background: #7fd1d1;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.footer {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    font-size: 13px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    text-align: center;
+}

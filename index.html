@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="title">Memory Game</h1>
+        </header>
+
+
+        <section class="score-panel">
+
+            <div id="score">
+                <ul class="stars">
+                    <li class="star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                    <li class="star">
+                        <i class="fas fa-star"></i>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="moves">
+                <span class="moves-count">0</span>
+                <span class="moves-title">Moves</span>
+            </div>
+
+            <div id="timer">
+                <span class="displayTime">00:00</span>
+            </div>
+
+            <div id="restart">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+
+        </section>
+
+        <section class="deck">
+
+            <div class="card" data-framework="dna">
+                <img class="front" src="img/dna.svg" alt="dna">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="dna">
+                <img class="front" src="img/dna.svg" alt="dna">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="view">
+                <img class="front" src="img/view.svg" alt="view">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="view">
+                <img class="front" src="img/view.svg" alt="view">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="vector">
+                <img class="front" src="img/vector.svg" alt="vector">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="vector">
+                <img class="front" src="img/vector.svg" alt="vector">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="analysis">
+                <img class="front" src="img/analysis.svg" alt="analysis">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="analysis">
+                <img class="front" src="img/analysis.svg" alt="analysis">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="computer">
+                <img class="front" src="img/computer.svg" alt="computer">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="computer">
+                <img class="front" src="img/computer.svg" alt="computer">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="design">
+                <img class="front" src="img/design.svg" alt="design">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+            <div class="card" data-framework="design">
+                <img class="front" src="img/design.svg" alt="design">
+                <img class="back" src="img/doubt.svg" alt="doubt">
+            </div>
+
+        </section>
+
+    </div>
+
+    <!--Start feedback modal-->
+    <div class="modal">
+
+    </div>
+
+    <!--End modal-->
+    <script src="script.js"></script>
+</body>
+
+<footer>
+    <p class="footer"> Made with <i class="fas fa-heart"></i> by Melissa de Britto</p>
+</footer>
+
+</html>
