@@ -8,7 +8,6 @@ const cardsDeck = document.querySelector('.deck');
 let blockCards = false;
 let hasFlipped = false;
 let firstOne, secondOne;
-let openCards = [];
 
 function flipCard() {
 
@@ -54,22 +53,13 @@ function unflipCards() {
 
         resetBoard();
 
-    }, 1400);
+    }, 1300);
 }
 
 function resetBoard() {
     [hasFlipped, blockCards] = [false, false]
     [firstOne, secondOne] = [null, null]
 }
-
-//Mix cards
-
-(function shuffle() {
-    cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 12);
-        card.style.order = randomPos;
-    });
-})();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
@@ -79,7 +69,13 @@ const restartBtn = document.querySelector('#restart');
 restartBtn.addEventListener('click', function() {
     cardsDeck.innerHTML = "";
 
-    resetBoard();
-
-    init();
 });
+
+//Mix cards
+
+(function shuffle() {
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 12);
+        card.style.order = randomPos;
+    });
+})();
