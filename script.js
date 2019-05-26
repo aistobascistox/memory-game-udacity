@@ -4,6 +4,8 @@ let moves = document.querySelector('.moves-count');
 let score = document.querySelector('#score');
 const modal = document.querySelector('.modal');
 const cardsDeck = document.querySelector('.deck');
+const timer = document.querySelector('.timer');
+let liveTimer, totalSeconds = 0;
 
 let blockCards = false;
 let hasFlipped = false;
@@ -56,6 +58,7 @@ function unflipCards() {
     }, 1300);
 }
 
+
 function resetBoard() {
     [hasFlipped, blockCards] = [false, false]
     [firstOne, secondOne] = [null, null]
@@ -63,15 +66,19 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-//Clear moves, time, reshuffle cards and alow user to restart game
 
 const restartBtn = document.querySelector('#restart');
 restartBtn.addEventListener('click', function() {
     cardsDeck.innerHTML = "";
 
+
 });
 
-//Mix cards
+restartBtn.addEventListener('click', function() {
+    cardsDeck.innerHTML = '.deck';
+
+});
+
 
 (function shuffle() {
     cards.forEach(card => {
